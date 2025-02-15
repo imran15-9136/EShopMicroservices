@@ -1,10 +1,39 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{ADFF2DD0-B6BB-4876-AF17-1183E272CF2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{307F8CDA-5077-4415-AC2E-ADEFA15B2743}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "Catalog\Catalog.API\Catalog.API.csproj", "{BC3954F3-32F3-4D91-80E4-32F856E1D2FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{F9B6A619-6D3B-467E-A66E-4A2B96AA93D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlock", "BuildingBlocks\BuildingBlock\BuildingBlock.csproj", "{3EF0B4B6-25EC-4BC5-ADDF-BE2B9B4B5DE6}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC3954F3-32F3-4D91-80E4-32F856E1D2FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC3954F3-32F3-4D91-80E4-32F856E1D2FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC3954F3-32F3-4D91-80E4-32F856E1D2FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC3954F3-32F3-4D91-80E4-32F856E1D2FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EF0B4B6-25EC-4BC5-ADDF-BE2B9B4B5DE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EF0B4B6-25EC-4BC5-ADDF-BE2B9B4B5DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EF0B4B6-25EC-4BC5-ADDF-BE2B9B4B5DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EF0B4B6-25EC-4BC5-ADDF-BE2B9B4B5DE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{307F8CDA-5077-4415-AC2E-ADEFA15B2743} = {ADFF2DD0-B6BB-4876-AF17-1183E272CF2F}
+		{BC3954F3-32F3-4D91-80E4-32F856E1D2FC} = {307F8CDA-5077-4415-AC2E-ADEFA15B2743}
+		{3EF0B4B6-25EC-4BC5-ADDF-BE2B9B4B5DE6} = {F9B6A619-6D3B-467E-A66E-4A2B96AA93D4}
 	EndGlobalSection
 EndGlobal
