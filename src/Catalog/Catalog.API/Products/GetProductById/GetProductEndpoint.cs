@@ -16,10 +16,10 @@ namespace Catalog.API.Products.GetProductById
 				var response = result.Adapt<GetProductResponse>();
 				return Results.Ok(response);
 			})	.WithName("productById")
-				.Produces<CreateProductResponse>(StatusCodes.Status201Created)
+				.Produces<CreateProductResponse>(StatusCodes.Status200OK)
 				.ProducesProblem(StatusCodes.Status400BadRequest)
-				.WithSummary("Create Product")
-				.WithDescription("Create a new product.");
+				.WithSummary("Get a  Product")
+				.WithDescription("Get a product.");
 		}
 	}
 }
