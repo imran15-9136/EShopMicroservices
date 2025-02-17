@@ -1,7 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 
-//add services to the container.
-builder.Services.AddCarter(); //http api
+// Add services to the container.
+builder.Services.AddCarter(); // HTTP API
 builder.Services.AddMediatR(config =>
 {
 	config.RegisterServicesFromAssemblies(typeof(Program).Assembly);
@@ -12,11 +12,19 @@ builder.Services.AddMarten(options =>
 	options.Connection(builder.Configuration.GetConnectionString("Database")!);
 }).UseLightweightSessions();
 
+// Add Swagger services
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
 
-//configure the HTTP request pipeline.
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+	app.UseSwagger();
+	app.UseSwaggerUI();
+}
+
 app.MapCarter();
 
-
 app.Run();
- 
